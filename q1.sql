@@ -4,7 +4,6 @@ SELECT
   acc.size,
   pss.status AS ps_status,
   status_date AS ps_status_date,
-  acc.arr,
   cycle_status,
   cycle_date,
   ROW_NUMBER() OVER (PARTITION BY acc.account_name ORDER BY cycle_date DESC) AS latest_cycle_date_check
